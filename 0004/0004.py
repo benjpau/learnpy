@@ -16,7 +16,7 @@ for i in range(0, len(content)):
             flag = 0
             end = i
             word = content[start:end]
-            dic.setdefault(word, 0)     # dic默认初始化，若word则什么也不做
+            dic.setdefault(word, 0)     # dic默认初始化，若word存在则什么也不做
             dic[word] += 1
 ans = sorted(dic.items(), key=lambda d: d[1], reverse=True)     # 按照value排序，items()将dic转换为list
 for it in ans:
